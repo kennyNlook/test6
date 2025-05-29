@@ -1,0 +1,347 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RTB Subpage</title>
+    <style>
+        /* Combined CSS */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e8e2e2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Navbar styling */
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #007bff; /* Blue background */
+            padding: 15px 40px;
+            width: 100%;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            height: 60px;
+            border-radius: 50%;
+        }
+
+        .nav-links a {
+            margin-right: 30px;
+            text-decoration: none;
+            color: white;
+            font-weight: 600;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #ffeb3b; /* Yellow on hover */
+        }
+
+        .auth-buttons button {
+            margin-left: 15px;
+            padding: 10px 20px;
+            font-weight: 600;
+            border-radius: 25px;
+            border: 2px solid white;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .auth-buttons .login {
+            background-color: transparent;
+            color: white;
+        }
+
+        .auth-buttons .login:hover {
+            background-color: white;
+            color: #007bff;
+        }
+
+        .auth-buttons .signup {
+            background-color: white;
+            color: #007bff;
+        }
+
+        .auth-buttons .signup:hover {
+            background-color: #0056b3;
+            color: white;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background-image: url('exchange.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            padding: 80px 10px 40px;
+            color: white;
+            width: 100%;
+        }
+
+        .hero-section h1 {
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+
+        .hero-section p {
+            font-size: 14px;
+            margin: 0;
+        }
+
+    
+    .image-section {
+      background-color: #f2f2f2;
+      padding: 20px 10px;
+      width: 100%;
+    }
+
+    .image-section h1 {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+
+    .image-row {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+      background-image: url(image.jpg);
+    }
+    
+
+    .card {
+      position: relative;
+      width: 270px;
+      height: 180px;
+      border-radius: 8px;
+      overflow: hidden;
+      background-color: rgb(21, 21, 21);
+      box-shadow: 0 0 5px rgba(0,0,0,0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .card img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 1;
+          
+    ;
+    }
+
+    .card-text {
+      position: relative;
+      z-index: 2;
+      background: rgba(255, 255, 255, 0.6);
+      padding: 10px;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-size: 13px;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .card-text p {
+      margin-top: 6px;
+      font-size: 11px;
+      font-weight: normal;
+    }
+
+  
+    .contact-section {
+      background: linear-gradient(to right, #0c96d6, #0e0e0d, #0c96d6);
+      padding: 20px 10px;
+      color: white;
+      font-size: 14px;
+      width: 100%;
+    }
+
+    .contact-section a {
+      color: white;
+      text-decoration: underline;
+    }
+
+ 
+    .footer-section {
+      background: linear-gradient(to right, #ff7e5f, #feb47b);
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+      font-size: 12px;
+      width: 100%;
+    }
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #ffffff;
+            padding: 15px 40px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .logo {
+            height: 60px;
+        }
+        .nav-links a {
+            margin-right: 30px;
+            text-decoration: none;
+            color: #333333;
+            font-weight: 600;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+        .nav-links a:hover {
+            color: #0056b3;
+        }
+        .auth-buttons button {
+            margin-left: 15px;
+            padding: 10px 20px;
+            font-weight: 600;
+            border-radius: 25px;
+            border: 2px solid #0056b3;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .auth-buttons .login {
+            background-color: #ffffff;
+            color: #0056b3;
+        }
+        .auth-buttons .login:hover {
+            background-color: #0056b3;
+            color: #ffffff;
+        }
+        .auth-buttons .signup {
+            background-color: #0056b3;
+            color: #ffffff;
+        }
+        .auth-buttons .signup:hover {
+            background-color: #003f7d;
+        }
+        .welcome {
+            text-align: center;
+            margin: 80px auto;
+            padding: 40px;
+            background-color: #ffffff;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+        }
+        .welcome h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            color: #0056b3;
+        }
+        .welcome p {
+            color: #555555;
+            font-size: 1.2em;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <header class="navbar">
+        <img src="logo.png" alt="RTB Logo" class="logo">
+        <nav class="nav-links">
+            <a href="#about">ABOUT US</a>
+            <a href="#mandate">SERVICES</a>
+            <a href="#special">MENU</a>
+        </nav>
+        <div class="auth-buttons">
+            <button class="login">Login</button>
+            <button class="signup">SignUp</button>
+        </div>
+    </header>
+    
+
+  <section class="hero-section" id="home">
+    <h1>WELCOME TO MUBUGA Currency Exchange</h1>
+    <p>Supporting people in exchanging one currency for another</p>
+  </section>
+
+
+  <section class="image-section" id="service">
+    <h1>OUR Services</h1>
+
+    <div class="image-row">
+      <div class="card">
+        <img src="foreign.jpg" alt="Exchange">
+        <div class="card-text">
+          Exchange Foreign Money<br>For Local Money
+          <p>People can bring money from another country and get local money in return.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="money.jpg" alt="Travel Help">
+        <div class="card-text">
+          Help Travelers Get the<br>Money They Need
+          <p>Travelers can change their money before or during their trip so they can spend easily.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="Rwandan.jpg" alt="Business Support">
+        <div class="card-text">
+          Support Businesses with<br>International Payments
+          <p>Businesses that buy or sell in other countries can exchange money to pay or get paid.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="contact-section" id="about">
+    <h2>Contact Us</h2>
+    <p><strong>Location:</strong> Karongi District, Rwanda</p>
+    <p><strong>Email:</strong> <a href="mailto:christophegisubizo@gmail.com">christophegisubizo@gmail.com</a></p>
+    <p><strong>Email:</strong> <a href="mailto:oraimpanoyimana@gmail.com">oraimpanoyimana@gmail.com</a></p>
+    <p><strong>Phone:</strong> +250 792993603</p>
+    <p><strong>Phone:</strong> +250 727296783</p>
+  </section>
+
+  <section class="feedback">
+    <div class="feedback-container">
+      <textarea id="feedback-input" placeholder="Enter your feedback here..."></textarea>
+      <button id="feedback-submit">Submit Feedback</button>
+      <div id="feedback-message"></div>
+    </div>
+    <script>
+      const feedbackInput = document.getElementById('feedback-input');
+      const feedbackSubmit = document.getElementById('feedback-submit');
+      const feedbackMessage = document.getElementById('feedback-message');
+      
+      feedbackSubmit.addEventListener('click', () => {
+        const feedbackText = feedbackInput.value.trim();
+      
+        if (feedbackText === '') {
+          feedbackMessage.textContent = 'Please enter your feedback!';
+        } else {
+          // Here you would typically send the feedback to a server
+          // using an AJAX request (e.g., fetch or XMLHttpRequest).
+          // For this example, we'll just display a confirmation message.
+          feedbackMessage.textContent = 'Thank you for your feedback!';
+          feedbackInput.value = ''; // Clear the input field
+        }
+      });
+      </script>
+      
+  </section>
+
+  <footer class="footer-section">
+    <p>© 2025 Mubuga CE Company. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

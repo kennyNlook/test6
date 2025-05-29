@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Robot Check</title>
+  <style>
+  
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f4f7f6; 
+    }
+
+    .container {
+      background: white;
+      padding: 2rem 3rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      width: 100%;
+      max-width: 400px; 
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      color: #333;
+      margin-bottom: 20px;
+      font-weight: 600;
+    }
+
+    .checkbox {
+      margin: 1rem 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    input[type="checkbox"] {
+      width: 20px;
+      height: 20px;
+      margin-right: 10px;
+      accent-color: #4CAF50;
+    }
+
+    button {
+      padding: 0.6rem 1.5rem;
+      font-size: 1.1rem;
+      border: none;
+      border-radius: 5px;
+      background-color: #4CAF50;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    button:disabled {
+      background-color: #ccc;
+      cursor: not-allowed;
+    }
+
+    button:hover:not(:disabled) {
+      background-color: #45a049;
+      transform: translateY(-2px);
+    }
+
+ 
+    @media (max-width: 480px) {
+      .container {
+        padding: 1.5rem 2rem;
+      }
+
+      h2 {
+        font-size: 1.3rem;
+      }
+
+      button {
+        padding: 0.5rem 1.2rem;
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>Please confirm you're not a robot</h2>
+
+    <div class="checkbox">
+      <input type="checkbox" id="robotCheck" onclick="toggleSubmit()">
+      <label for="robotCheck">I'm not a robot</label>
+    </div>
+
+    <button id="submitBtn" disabled onclick="submitForm()">Submit</button>
+  </div>
+
+  <script>
+   
+    function toggleSubmit() {
+      const checkbox = document.getElementById('robotCheck');
+      const button = document.getElementById('submitBtn');
+      button.disabled = !checkbox.checked; 
+    }
+
+    
+    function submitForm() {
+      alert("Thank you for confirming!");
+    }
+  </script>
+
+</body>
+</html>

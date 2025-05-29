@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Currency Converter</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #333;
+
+      
+      background: url('exchange2.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+
+    }
+
+    .converter-container {
+      background: linear-gradient(to bottom right, #ab07e7cc, #d0ffd1cc, #ab07e7cc ); 
+      padding: 40px 30px;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      width: 100%;
+      max-width: 420px;
+      text-align: center;
+    
+    }
+
+    h1 {
+      margin-bottom: 30px;
+      font-size: 28px;
+      color: #0072ff;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 12px;
+      margin: 12px 0;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+
+    button {
+      background-color: #0072ff;
+      color: white;
+      border: none;
+      padding: 12px 0;
+      width: 100%;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 10px;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #005ecc;
+    }
+
+    .result {
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: bold;
+      color: #333333;
+    }
+
+   
+      h1 {
+        font-size: 24px;
+      }
+      </style>
+</head>
+<body>
+
+  <div class="converter-container">
+    <h1>Currency Converter</h1>
+    
+    <input type="number" id="amount" placeholder="Enter amount" />
+
+    <select id="from">
+      <option value="USD">🇺🇸 USD - USA</option>
+      <option value="UGX">🇺🇬 UGX - Uganda</option>
+      <option value="GBP">🇬🇧 GBP - UK</option>
+      <option value="RWF">🇷🇼 RWF - Rwanda</option>
+    </select>
+
+    <select id="to">
+      <option value="USD">🇺🇸 USD - USA</option>
+      <option value="UGX">🇺🇬 UGX - Uganda</option>
+      <option value="GBP">🇬🇧 GBP - UK</option>
+      <option value="RWF">🇷🇼 RWF - Rwanda</option>
+    </select>
+
+    <button onclick="convert()">Convert</button>
+
+    <div class="result" id="result"></div>
+  </div>
+
+  <script>
+    function convert() {
+      var amount = parseFloat(document.getElementById('amount').value);
+      var from = document.getElementById('from').value;
+      var to = document.getElementById('to').value;
+      var resultEl = document.getElementById('result');
+      var usdAmount = 0;
+      var finalResult = 0;
+
+      if (isNaN(amount) || amount <= 0) {
+        resultEl.textContent = "🔔 Please enter a valid amount.";
+        resultEl.style.color = "#cc0000";
+        return;
+      }
+
+      
+      if (from === "USD") {
+        usdAmount = amount;
+      } else if (from === "UGX") {
+        usdAmount = amount / 3800;
+      } else if (from === "GBP") {
+        usdAmount = amount / 0.78;
+      } else if (from === "RWF") {
+        usdAmount = amount / 1250;
+      }
+
+     
+      if (to === "USD") {
+        finalResult = usdAmount;
+      } else if (to === "UGX") {
+        finalResult = usdAmount * 3800;
+      } else if (to === "GBP") {
+        finalResult = usdAmount * 0.78;
+      } else if (to === "RWF") {
+        finalResult = usdAmount * 1250;
+      }
+
+      resultEl.style.color = "#0072ff";
+      resultEl.textContent = amount + " " + from + " = " + finalResult.toFixed(2) + " " + to;
+    }
+  </script>
+
+</body>
+</html>

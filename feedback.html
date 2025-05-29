@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    <style>
+        body {
+           
+            background-size: 400% 400%;
+            animation: gradientAnimation 10s ease infinite;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-image: url(exchange.jpg);
+        }
+
+        @keyframes gradientAnimation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .feedback-container {
+            width: 300px;
+            padding: 20px;
+            border-radius: 12px;
+            background-color: #f9f9f9;
+            box-shadow: 0 10px 20px rgba(113, 50, 50, 0.15);
+            margin: 40px auto;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, rgb(79, 3, 75), grey, rgb(79, 3, 75));
+        }
+
+        .feedback-container b {
+            font-size: 1.2em;
+            color: #444;
+        }
+
+        .feedback-container textarea {
+            width: 100%;
+            border-radius: 8px;
+            padding: 10px;
+            border: 1px solid #f5ebeb;
+            margin: 10px 0;
+            font-size: 1em;
+        }
+
+        .feedback-container textarea:focus {
+            border-color: #007bff;
+            outline: none;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+        }
+
+        .send-button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s;
+            text-decoration: none;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        .send-button:hover {
+            background-color: #0056b3;
+        }
+
+        .info-details summary {
+            font-size: 1.1em;
+            cursor: pointer;
+            color: #444;
+            margin-top: 15px;
+        }
+
+        .info-details summary:hover {
+            color: #007bff;
+        }
+
+        .info-details {
+            margin-top: 20px;
+            padding: 10px;
+            border-radius: 8px;
+            background-color: #e2dddd;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="feedback-container">
+        <b>SEND FEEDBACK:</b><br>
+        <textarea rows="4" cols="30" placeholder="Give Us Your Feedback"></textarea><br>
+        <a href="feedback.html" class="send-button">SEND</a><br>
+        <details class="info-details">
+            <summary>👈<u><b>More INFO:</b></u></summary>
+            This WEBSITE was developed by IT <b><i>CHRISS</i></b> to advertise his projects.
+        </details>
+    </div>
+</body>
+</html>
